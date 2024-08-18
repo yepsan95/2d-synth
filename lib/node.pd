@@ -1,0 +1,8 @@
+#N canvas 775 303 450 300 12;
+#X obj 45 20 inlet;
+#X obj 45 44 outlet;
+#N canvas 0 50 450 250 (subpatch) 0;
+#X coords 0 1 100 -1 20 20 2 0 0;
+#X restore 100 20 graph;
+#X connect 0 0 1 0;
+#X coords 0 -1 1 1 17 17 2 100 100;

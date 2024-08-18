@@ -1,0 +1,16 @@
+#N struct 1005-point float x0 float y0 float xs float ys float fg float in float gridx float gridy;
+#N struct 1018-point float x0 float y0 float xs float ys float fg float in float gridx float gridy;
+#N struct 1034-point float x0 float y0 float xs float ys float fg float in float gridx float gridy;
+#N struct 1047-point float x0 float y0 float xs float ys float fg float in float gridx float gridy;
+#N struct 1063-point float x0 float y0 float xs float ys float fg float in float gridx float gridy;
+#N struct 1123-point float x0 float y0 float xs float ys float fg float in float gridx float gridy;
+#N struct 1136-point float x0 float y0 float xs float ys float fg float in float gridx float gridy;
+#N struct 1154-point float x0 float y0 float xs float ys float fg float in float gridx float gridy;
+#N canvas 952 1033 1920 997 12;
+#X declare -path ./lib;
+#X obj 136 87 declare -path ./lib;
+#X obj 136 117 fm;
+#X obj 776 117 pm;
+#X obj 136 457 processing;
+#X obj 1076 457 out;
+#X obj 136 797 liveclock;

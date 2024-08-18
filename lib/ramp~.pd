@@ -1,0 +1,9 @@
+#N canvas 765 246 450 300 12;
+#X obj 45 20 inlet;
+#X obj 45 46 pack f \$1;
+#X obj 45 74 line~;
+#X obj 45 99 outlet~;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X coords 0 300 1 299 17 17 0;
