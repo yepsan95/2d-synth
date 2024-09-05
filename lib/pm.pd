@@ -1,6 +1,6 @@
 #N struct 1034-point float x0 float y0 float xs float ys float fg float in float gridx float gridy;
 #N struct 1047-point float x0 float y0 float xs float ys float fg float in float gridx float gridy;
-#N canvas 1773 202 1920 997 12;
+#N canvas 4 44 1920 997 12;
 #X declare -path .;
 #X obj 358 183 phasor~;
 #X obj 358 207 +~;
@@ -48,7 +48,7 @@
 #X obj 555 237 ramp~ 50;
 #X obj 415 237 ramp~ 50;
 #X obj 737 359 nbx 4 20 -1e+37 1e+37 0 0 empty \$0-mod0 empty 0 -10 1 14 #ffffff #000000 #000000 0 256;
-#X obj 218 299 throw~ signal_dry_out;
+#X obj 218 299 outlet~;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 31 0;
