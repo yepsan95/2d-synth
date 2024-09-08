@@ -1,8 +1,8 @@
 #N canvas 0 44 1920 997 12;
-#N canvas 953 0 958 988 key_config_storage 1;
+#N canvas 652 53 958 988 key_config_storage 0;
 #N canvas 156 156 450 250 (subpatch) 0;
 #X array key_config_storage 8 float 3;
-#A 0 111 106 107 108 121 117 105 111;
+#A 0 138.686 138.686 142.171 140.429 140.429 126.486 124.743 128.229;
 #X coords 0 1 8 245 200 140 1 0 0;
 #X restore 10 20 graph;
 #X obj 10 200 r key_config_storage;
