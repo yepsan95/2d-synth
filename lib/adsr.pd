@@ -1,4 +1,4 @@
-#N canvas 4 0 1920 997 12;
+#N canvas 0 44 1920 997 12;
 #X obj 50 214 *~;
 #X obj 106 195 *~;
 #X obj 50 40 inlet~;
@@ -8,6 +8,8 @@
 #X obj 106 171 line~;
 #X msg 106 141 1 \$1;
 #X msg 155 141 0 \$1;
+#X obj 227 128 r silence_env;
+#X msg 227 152 0 \$1;
 #X connect 0 0 3 0;
 #X connect 1 0 0 1;
 #X connect 2 0 0 0;
@@ -17,4 +19,6 @@
 #X connect 6 0 1 1;
 #X connect 7 0 6 0;
 #X connect 8 0 6 0;
+#X connect 9 0 10 0;
+#X connect 10 0 6 0;
 #X coords 0 997 1 996 300 50 0;
