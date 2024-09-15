@@ -1,0 +1,3 @@
+#N canvas 234 234 1920 997 12;
+#X declare -path .;
+#X obj 45 48 declare -path .;

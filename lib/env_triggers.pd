@@ -110,12 +110,12 @@
 #X obj 140 836 + 1;
 #X obj 140 786 r \$0-toggle;
 #X obj 140 810 * -1;
-#X obj 562 522 inlet;
+#X obj 332 522 inlet;
 #X obj 472 -248 r \$0-load_config;
-#X obj 562 546 t l b, f 6;
-#X obj 601 571 s \$0-conf;
-#X obj 562 571 iter;
-#X obj 562 595 s \$0-load_config;
+#X obj 332 546 t l b, f 6;
+#X obj 371 571 s \$0-conf;
+#X obj 332 571 iter;
+#X obj 332 595 s \$0-load_config;
 #X obj 332 126 tgl 15 0 empty empty empty 0 -10 0 12 #ffc7c6 #000000 #000000 0 1;
 #X obj 427 141 s \$0-disable;
 #X obj 562 764 *~, f 8;
@@ -123,6 +123,7 @@
 #X obj 615 740 ramp~ 30;
 #X obj 562 994 throw~ \$0-signal-out;
 #X obj 615 663 r \$0-disable;
+#X obj 562 522 inlet;
 #X connect 2 0 4 0;
 #X connect 3 0 4 1;
 #X connect 4 0 5 0;
