@@ -17,7 +17,6 @@
 #X obj 10 415 pack f f \$0, f 26;
 #X msg 10 441 \; \$3-key_config_storage \$1 \$2;
 #X floatatom 10 373 5 0 0 0 - - - 0;
-#X obj 236 323 print;
 #N canvas 0 50 450 250 (subpatch) 0;
 #X array \$0-key_config_storage 9 float 3;
 #A 0 0 104 106 107 108 121 117 105 111;
@@ -36,7 +35,6 @@
 #X connect 9 0 13 0;
 #X connect 11 0 4 0;
 #X connect 12 0 8 0;
-#X connect 12 0 17 0;
 #X connect 13 0 10 0;
 #X connect 14 0 15 0;
 #X connect 16 0 14 0;
