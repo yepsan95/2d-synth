@@ -26,6 +26,9 @@
 #X obj 656 367 osc_action;
 #X obj 136 317 env_triggers 1;
 #X obj 486 317 env_triggers 2;
+#X text 870 726 2d-synth by Bryan Yep (2024);
+#X text 870 746 https://github.com/yepsan95;
+#X text 870 786 Feel free to use \, modify \, and share this patch \, but please provide proper attribution by crediting me as the original creator.;
 #X connect 1 0 16 0;
 #X connect 2 0 17 0;
 #X connect 3 0 5 0;
