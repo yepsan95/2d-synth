@@ -1,4 +1,4 @@
-#N canvas 0 0 958 988 12;
+#N canvas 4 0 1920 997 12;
 #X floatatom 72 483 5 0 0 0 - - - 0;
 #X obj 111 571 f;
 #X obj 141 571 + 1;
@@ -188,8 +188,8 @@
 #X obj -74 582 pack s f;
 #X msg -74 554 symbol key_config;
 #X obj -74 525 t b f, f 8;
-#X obj -74 611 s key_config;
 #X obj 129 487 r \$0-load_config;
+#X obj -74 611 s key_config_\$1;
 #X connect 0 0 185 0;
 #X connect 1 0 2 0;
 #X connect 1 0 63 0;
@@ -380,9 +380,9 @@
 #X connect 185 0 5 0;
 #X connect 185 0 188 0;
 #X connect 185 1 1 0;
-#X connect 186 0 189 0;
+#X connect 186 0 190 0;
 #X connect 187 0 186 0;
 #X connect 188 0 187 0;
 #X connect 188 1 186 1;
-#X connect 190 0 185 0;
+#X connect 189 0 185 0;
 #X coords 0 -1 1 1 427 83 2 100 100;
