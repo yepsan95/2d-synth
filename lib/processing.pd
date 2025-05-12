@@ -3,7 +3,7 @@
 #N struct 1136-point float x0 float y0 float xs float ys float fg float in float gridx float gridy;
 #N canvas 4 44 1920 997 12;
 #X declare -path .;
-#X obj 1056 111 slider2d 150 150 1 0 0 1 1 255 255 255 0 0 0 0 0 0 1 0 empty empty;
+#X obj 1056 111 else/slider2d 150 150 1 0 0 1 1 255 255 255 0 0 0 0 0 0 1 0 empty empty;
 #X obj 1056 307 unpack f f, f 11;
 #X floatatom 1056 331 5 0 0 0 - - - 0;
 #X floatatom 1130 331 5 0 0 0 - - - 0;
@@ -22,7 +22,7 @@
 #X obj 1130 354 s \$0-reverb_wet;
 #X obj 392 341 r \$0-reverb_roomsize;
 #X obj 323 317 r \$0-reverb_wet;
-#X obj 886 111 slider2d 150 150 50 1500 0 10000 1 255 255 255 0 0 0 0 0 0 813.667 0 empty empty;
+#X obj 886 111 else/slider2d 150 150 50 1500 0 10000 1 255 255 255 0 0 0 0 0 0 813.667 0 empty empty;
 #X obj 886 307 unpack f f, f 11;
 #X floatatom 886 331 5 0 0 0 - - - 0;
 #X floatatom 960 331 5 0 0 0 - - - 0;
@@ -35,7 +35,7 @@
 #X msg 886 33 yrange 0 10000;
 #X obj 392 234 r \$0-delay_feedback;
 #X obj 327 210 r \$0-delay_time;
-#X obj 716 111 slider2d 150 150 0 4000 -24 24 1 255 255 255 0 0 0 0 0 0 0 -24 empty empty;
+#X obj 716 111 else/slider2d 150 150 0 4000 -24 24 1 255 255 255 0 0 0 0 0 0 0 -24 empty empty;
 #X obj 716 307 unpack f f, f 11;
 #X floatatom 716 331 5 0 0 0 - - - 0;
 #X floatatom 790 331 5 0 0 0 - - - 0;

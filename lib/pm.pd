@@ -9,11 +9,11 @@
 #X obj 498 207 +~;
 #X obj 498 231 cos~;
 #X obj 498 255 *~;
-#X obj 716 113 slider2d 150 150 0 100 0 5 1 255 255 255 0 0 0 0 0 0 43.3333 2.3 empty empty;
+#X obj 716 113 else/slider2d 150 150 0 100 0 5 1 255 255 255 0 0 0 0 0 0 43.3333 2.3 empty empty;
 #X obj 716 315 unpack f f, f 11;
 #X floatatom 716 339 5 0 0 0 - - - 0;
 #X floatatom 790 339 5 0 0 0 - - - 0;
-#X obj 886 113 slider2d 150 150 0 100 0 5 1 255 255 255 0 0 0 0 0 0 16.6667 2.26667 empty empty;
+#X obj 886 113 else/slider2d 150 150 0 100 0 5 1 255 255 255 0 0 0 0 0 0 16.6667 2.26667 empty empty;
 #X obj 886 315 unpack f f, f 11;
 #X floatatom 886 339 5 0 0 0 - - - 0;
 #X floatatom 960 339 5 0 0 0 - - - 0;
