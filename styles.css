@@ -1,0 +1,124 @@
+html {
+	scroll-behavior: smooth;
+	font-size: 100%;
+}
+
+body {
+    position: relative;
+    font-family: var(--font-family-base);
+}
+
+header {
+    align-items: center;
+    text-align: center;
+    margin: 50px 0;
+}
+
+* {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+table {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    table-layout: default;
+    width: 50vw;
+    max-width: 50vw;
+    min-width: 960px;
+    border-collapse: collapse;
+    border: 1px solid white;
+}
+
+table, th, td {
+    border: 1px solid white;
+}
+
+td {
+    vertical-align: top;
+}
+
+.description {
+    transform: translateX(50%);
+    max-width: 50vw;
+    min-width: 960px;
+}
+
+.timestamp {
+    display: block;
+    align-items: center;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+}
+
+.instruction {
+    display: block;
+    align-items: center;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+}
+
+.graphic-svg {
+    height: 300px;
+    width: 300px;
+}
+
+.graphic-container {
+    width: 100px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 100px;
+}
+
+#vslider {
+    position: relative;
+    width: 50px;
+    height: 100px;
+}
+
+#vslider_bar {
+    animation: slide-up 4s linear infinite;
+}
+
+@keyframes slide-up {
+    0% { transform: translateY(50%); }
+    90% { transform: translateY(0%); }
+    100% {}
+}
+
+.svg0 {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.svg1 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    animation: pulse-opacity 2s ease-in-out infinite;
+}
+
+@keyframes pulse-opacity {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+#l2-0 {
+    margin-top: 255px;
+}
+
+:root {
+    --color-primary: var(--color-black);
+	--color-black: #090909;
+	--color-white: #ffffff;
+	--color-light-grey: #f3f3f3;
+	--color-dark-grey: #353535;
+	--text-color: var(--color-white);
+    --background-color: var(--color-black);
+	--font-family-base: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}

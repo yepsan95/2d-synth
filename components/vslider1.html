@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<div class="vslider">
+  <h2 class="vslider-label"></h2>
+  <svg
+    width="5.5726895mm"
+    height="15.336783mm"
+    viewBox="0 0 5.5726895 15.336783"
+    version="1.1"
+    id="vslider"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:svg="http://www.w3.org/2000/svg"
+  >
+
+    <style>
+      .vslider-label::before {
+        content: var(--vslider-label, 'osc1~');
+      }
+
+      #vslider_bar {
+        animation: slide-up var(--vslider-animation-duration, 4s) linear infinite;
+      }
+
+      @keyframes slide-up {
+        0%   { transform: translateY(var(--vslider-animation-start, 50%)); }
+        90%  { transform: translateY(var(--vslider-animation-end, 0%)); }
+        100% {}
+      }
+    </style>
+
+    <g id="layer1" transform="translate(-90.381593,-124.12487)">
+      <rect
+        style="fill:#000000;fill-opacity:1;stroke-width:4.99999"
+        width="5.5726824"
+        height="15.336783"
+        x="90.381599"
+        y="124.12486" />
+      <rect
+        style="fill:#feffc6;fill-opacity:1;stroke-width:5.17946"
+        width="5.0270896"
+        height="14.763756"
+        x="90.685722"
+        y="124.3779" />
+      <rect
+        style="fill:#000000;fill-opacity:1;stroke-width:5.31134"
+        width="1.9151244"
+        height="0.59710008"
+        x="90.628532"
+        y="124.31448" />
+    </g>
+
+    <g id="vslider_bar">
+      <rect
+        style="fill:#000000;fill-opacity:1;stroke-width:5.09271"
+        width="5.1329169"
+        height="1.031875"
+        x="0.2"
+        y="7" />
+    </g>
+  </svg>
+</div>
