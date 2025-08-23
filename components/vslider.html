@@ -22,7 +22,7 @@
         @keyframes slide-up {
           0%   { transform: translateY(var(--animation-start, 50%)); }
           90%  { transform: translateY(var(--animation-end, 0%)); }
-          100% {}
+          100%  { transform: translateY(var(--animation-end, 0%)); }
         }
       </style>
 
@@ -44,7 +44,7 @@
           data-component="number_box"
           style="
             --size: 80px;
-            --label: '30 - 50';
+            --label: var(--freq, '25 - 50');
           "
         ></div>
         <span class="vslider-number-box-label">freq</span>
@@ -122,9 +122,9 @@
     }
 
     /* visibility controlled by CSS variables */
-    .number-box-1 { display: var(--show-number-box-1, none); }
-    .number-box-2 { display: var(--show-number-box-2, none); }
-    .number-box-3 { display: var(--show-number-box-3, none); }
+    .number-box-1 { display: var(--show-freq, none); }
+    .number-box-2 { display: var(--show-harm-1, none); }
+    .number-box-3 { display: var(--show-harm-2, none); }
 
     /* put inside each component's <style> where you define fonts */
     :host, .number-box, .vslider-number-box-label, .inner-number-box-label {

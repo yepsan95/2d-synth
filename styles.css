@@ -87,7 +87,7 @@ td.body-cell {
 
 .graphic-row {
   display: flex;
-  justify-content: center;  /* center horizontally */
+  justify-content: auto;  /* center horizontally */
   align-items: center;      /* center vertically */
   width: 100%;
 }
