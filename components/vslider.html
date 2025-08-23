@@ -1,0 +1,142 @@
+<div class="vslider">
+  <h2 class="vslider-label"></h2>
+
+  <div class="vslider-body">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 5.57 15.34"
+      preserveAspectRatio="xMinYMid meet"
+      width="var(--size, 80px)"
+      height="calc(var(--size, 80px) * (15.34 / 5.57))"
+      style="display:block; shape-rendering:geometricPrecision;"
+    >
+      <style>
+        .vslider-label::before {
+          content: var(--label, 'osc1~');
+        }
+
+        #vslider_bar {
+          animation: slide-up var(--animation-duration, 4s) linear infinite;
+        }
+
+        @keyframes slide-up {
+          0%   { transform: translateY(var(--animation-start, 50%)); }
+          90%  { transform: translateY(var(--animation-end, 0%)); }
+          100% {}
+        }
+      </style>
+
+      <!-- Background -->
+      <rect width="5.57" height="15.34" fill="black" />
+      <rect x="0.3" y="0.25" width="5.03" height="14.76" fill="#feffc6" />
+      <rect x="0.25" y="0.19" width="1.92" height="0.6" fill="black" />
+
+      <!-- Moving bar -->
+      <g id="vslider_bar">
+        <rect x="0.2" y="7" width="5.13" height="1.03" fill="black" />
+      </g>
+    </svg>
+
+    <!-- ✅ Wrap number boxes in a column container -->
+    <div class="vslider-numbers">
+      <div class="number-box-row number-box-1">
+        <div
+          data-component="number_box"
+          style="
+            --size: 80px;
+            --label: '30 - 50';
+          "
+        ></div>
+        <span class="vslider-number-box-label">freq</span>
+      </div>
+
+      <div class="number-box-row number-box-2">
+        <div
+          data-component="number_box"
+          style="
+            --size: 80px;
+            --label: '3';
+          "
+        ></div>
+        <span class="vslider-number-box-label">harm_1</span>
+      </div>
+
+      <div class="number-box-row number-box-3">
+        <div
+          data-component="number_box"
+          style="
+            --size: 80px;
+            --label: '2';
+          "
+        ></div>
+        <span class="vslider-number-box-label">harm_2</span>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .vslider-body {
+      display: flex;
+      align-items: flex-start; /* align top edges */
+      gap: 0.5em; /* space between slider and number boxes */
+    }
+
+    .vslider-body svg {
+      flex-shrink: 0; /* prevent SVG from shrinking */
+      display: block; /* avoid baseline whitespace differences */
+    }
+
+    /* stack number boxes vertically with spacing */
+    .vslider-numbers {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5em; /* vertical spacing between boxes */
+    }
+
+    /* make each row a flex row: [box] [label] */
+    .number-box-row {
+      display: flex;
+      align-items: center;  /* vertical centering */
+      gap: 0.3em;           /* tighter gap between box and label */
+      white-space: nowrap;  /* prevent label wrapping */
+    }
+
+    /* force number_box inline, so label doesn’t drop below */
+    .number-box-row > [data-component="number_box"] {
+      display: inline-block !important;
+      vertical-align: middle;
+    }
+
+    /* label sits beside and vertically centered; scales with box */
+    .vslider-number-box-label {
+      display: inline-block;
+      vertical-align: middle;
+      color: white;
+      /* --size must be px for consistent results across browsers */
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      font-size: calc(var(--size, 40px) * 0.45); /* adjust multiplier as needed */
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    /* visibility controlled by CSS variables */
+    .number-box-1 { display: var(--show-number-box-1, none); }
+    .number-box-2 { display: var(--show-number-box-2, none); }
+    .number-box-3 { display: var(--show-number-box-3, none); }
+
+    /* put inside each component's <style> where you define fonts */
+    :host, .number-box, .vslider-number-box-label, .inner-number-box-label {
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;   /* Chrome/Safari */
+      -moz-osx-font-smoothing: grayscale;    /* Firefox on macOS */
+      text-rendering: geometricPrecision;
+      font-kerning: normal;
+      font-variant-ligatures: none;
+      font-variant-numeric: tabular-nums;    /* IMPORTANT for numbers */
+      font-feature-settings: "tnum" 1;       /* ensure tabular digits */
+      line-height: 1;
+    }
+  </style>
+</div>

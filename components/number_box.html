@@ -1,0 +1,71 @@
+<div class="number-box">
+  <svg
+    viewBox="0 0 29 10"
+    xmlns="http://www.w3.org/2000/svg"
+    preserveAspectRatio="xMinYMid meet"
+    width="var(--size, 80px)"
+    height="calc(var(--size, 80px) * (10 / 29))"
+    style="display:block; shape-rendering:geometricPrecision;"
+  >
+    <!-- the original shapes used absolute coordinates (82,142...). 
+         We keep them by translating them into the normalized 0..29/10 box. -->
+    <g transform="translate(-82,-142)">
+      <!-- rectangle -->
+      <path
+        d="m82.338,142.557h26.035l2.223,2.223v7.038H82.338Z"
+        style="fill: #fff; stroke: #000; stroke-width: 0.5;"
+      />
+      <!-- diagonal -->
+      <path
+        d="m82.973,143.351 3.969,3.969 -3.81,3.81"
+        style="fill: none; stroke: #000; stroke-width: 0.5;"
+      />
+    </g>
+  </svg>
+
+  <!-- HTML label overlaid “inside” the box -->
+  <span class="inner-number-box-label" aria-hidden="true"></span>
+
+  <style>
+    .number-box {
+      position: relative;
+      display: inline-block;
+      /* make sure fonts render consistently */
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    .inner-number-box-label {
+      position: absolute;
+      top: 50%;                 /* vertical center */
+      left: 18%;                 /* small inset from left edge */
+      transform: translateY(-50%); /* vertical centering only */
+      font-family: inherit;
+      font-size: calc(var(--size, 80px) * 0.2); /* scales with box */
+      color: #000;
+      background: transparent;
+      pointer-events: none;
+      white-space: nowrap;
+      text-align: left;         /* ensure alignment starts left */
+      line-height: 1;
+    }
+
+    .inner-number-box-label::before {
+      content: var(--label, '0');
+    }
+
+    /* put inside each component's <style> where you define fonts */
+    :host, .number-box, .vslider-number-box-label, .inner-number-box-label {
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;   /* Chrome/Safari */
+      -moz-osx-font-smoothing: grayscale;    /* Firefox on macOS */
+      text-rendering: geometricPrecision;
+      font-kerning: normal;
+      font-variant-ligatures: none;
+      font-variant-numeric: tabular-nums;    /* IMPORTANT for numbers */
+      font-feature-settings: "tnum" 1;       /* ensure tabular digits */
+      line-height: 1;
+    }
+  </style>
+</div>

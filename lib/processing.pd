@@ -35,14 +35,14 @@
 #X msg 886 33 yrange 0 10000;
 #X obj 392 234 r \$0-delay_feedback;
 #X obj 327 210 r \$0-delay_time;
-#X obj 716 111 else/slider2d 150 150 0 4000 -24 24 1 255 255 255 0 0 0 0 0 0 0 0 empty empty;
+#X obj 716 111 else/slider2d 150 150 0 4000 -24 24 1 255 255 255 0 0 0 0 0 0 0 -24 empty empty;
 #X obj 716 307 unpack f f, f 11;
 #X floatatom 716 331 5 0 0 0 - - - 0;
 #X floatatom 790 331 5 0 0 0 - - - 0;
 #X obj 716 -5 loadbang;
 #X obj 715 275 nbx 5 20 -1e+37 1e+37 0 0 empty \$0-ring_modulation_number ring\ mod 0 -7 1 12 #dfdfdf #000000 #000000 0 256;
 #X obj 800 275 nbx 5 20 -1e+37 1e+37 0 0 empty \$0-pitch_shift_number pitch\ shift 0 -7 1 12 #dfdfdf #000000 #000000 0 256;
-#X obj 327 152 r \$0-pitch_shift;
+#X obj 327 132 r \$0-pitch_shift;
 #X obj 392 92 r \$0-ring_modulation;
 #X obj 716 384 s \$0-ring_modulation;
 #X obj 790 354 s \$0-pitch_shift;
@@ -62,7 +62,7 @@
 #X msg 1056 71 set 1 0;
 #X msg 886 71 set 0 0;
 #X msg 716 71 set 0 0;
-#N canvas 4 0 1920 997 colors 1;
+#N canvas 4 0 1920 997 colors 0;
 #X msg 14 456 \; \$1-2dslider-color list bgcolor \$2 \$3 \$4 \; \$1-2dslider-color list fgcolor \$5 \$6 \$7;
 #X msg 254 379 list \$1 255 255 255 0 0 0;
 #X obj 14 341 r dark_theme;
@@ -112,6 +112,7 @@
 #X obj 262 625 s \$0-delay_feedback_number;
 #X obj 262 663 s \$0-reverb_roomsize_number;
 #X obj 262 701 s \$0-reverb_wet_number;
+#X obj 327 156 * 24;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 1 1 3 0;
@@ -154,7 +155,7 @@
 #X connect 36 0 43 0;
 #X connect 36 0 58 0;
 #X connect 36 0 32 0;
-#X connect 39 0 9 1;
+#X connect 39 0 78 0;
 #X connect 40 0 14 1;
 #X connect 43 0 32 0;
 #X connect 44 0 32 0;
@@ -183,4 +184,5 @@
 #X connect 69 0 75 0;
 #X connect 70 0 76 0;
 #X connect 71 0 77 0;
+#X connect 78 0 9 1;
 #X coords 0 -1 1 1 520 200 2 700 100;

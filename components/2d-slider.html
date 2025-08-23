@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<div class="square-slider">
+  <h4 class="square-slider-label"></h4>
+  <svg
+    width="50mm"
+    height="50mm"
+    viewBox="0 0 151.8721 151.8721"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <style>
+      .square-slider-label::before {
+        content: var(--label, 'FREQUENCY MODULATION');
+        white-space: nowrap;
+        display: inline-block;
+        max-width: 100%;
+        font-size: 14.4px;
+      }
+
+      #green-area {
+        animation: pulse-opacity var(--animation-duration, 2s) ease-in-out infinite;
+      }
+
+      @keyframes pulse-opacity {
+          0% { opacity: 0; }
+          50% { opacity: 1; }
+          100% { opacity: 0; }
+      }
+    </style>
+
+    <!-- outer square -->
+    <g transform="translate(-30.057858,-61.168696)">
+      <rect
+        style="
+          opacity: 1;
+          fill: none;
+          stroke: #a0a0a0;
+          stroke-width: 5
+        "
+        width="146.8721"
+        height="146.8721"
+        x="32.557858"
+        y="63.668694" />
+    </g>
+
+    <!-- nested svg2 -->
+    <svg
+      id="green-area"
+      x="5"
+      y="72"
+      width="80" height="80"
+      viewBox="0 0 76.385033 74.897797"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+
+      <g transform="translate(-35.047351,-133.1005)">
+        <path
+          style="
+            fill: #2ba71d;
+            fill-opacity: 0.43;
+            stroke: none
+          "
+          d="
+            m 35.487113,133.1005
+            a 75.96833,75.96833 0 0 0 -0.368452,0.0264
+            c -0.0048,36.0204 -0.04133,53.48079 -0.07131,74.8714
+            H 111.43238
+            A 75.96833,75.96833 0 0 0 35.487113,133.1005 Z
+          "
+        />
+      </g>
+    </svg>
+  </svg>
+</div>
